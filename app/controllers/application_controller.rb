@@ -16,8 +16,8 @@ class ApplicationController < Sinatra::Base
       end
 
      post '/posts' do
-       new_post = Post.create(name: params[:name], content: params[:content])
-       new_post.save
+       Post.create(name: params[:name], content: params[:content])
+      #  new_post.save
        erb :index
      end
 
